@@ -1,0 +1,20 @@
+export default {
+  stories: [
+    '../stories/ActivityCard.stories.jsx',
+    '../stories/ActivityDetail.stories.jsx',
+    '../stories/BackToTopButton.stories.jsx',
+    '../stories/Button.stories.jsx',
+    '../stories/Foundations.stories.jsx',
+    '../stories/Hero.stories.jsx',
+    '../stories/InteractiveHoverButton.stories.jsx',
+    '../stories/LearningCalendar.stories.jsx',
+    '../stories/RegistrationDialog.stories.jsx',
+    '../stories/RegistrationActionConfirmation.stories.jsx',
+    '../stories/RegistrationConfirmation.stories.jsx',
+    '../stories/RegistrationForm.stories.jsx',
+    '../stories/SectionHeader.stories.jsx',
+    '../stories/Typography.stories.jsx',
+  ],
+  addons: [],
+  framework: '@storybook/react-vite',
+}

@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "agent-governance-setup": {
+      "source": "joachimtrungtuan/essential-boosters",
+      "sourceType": "github",
+      "skillPath": "skills-engineering/agent-governance-setup/SKILL.md",
+      "computedHash": "365e038e841238ef96aa334a93c259065ac0c398bd176592ae4e6ad962b7bdf4"
+    }
+  }
+}

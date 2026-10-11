@@ -1,0 +1,58 @@
+.ld-calendar-month {
+  background: var(--ld-surface);
+  border: var(--border-default);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+}
+
+.ld-calendar-month__title {
+  color: var(--ld-text);
+  font-size: var(--text-body-sm);
+  line-height: var(--leading-body-sm);
+  margin: 0 0 var(--space-3);
+}
+
+.ld-calendar-month__weekdays,
+.ld-calendar-month__days { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: var(--space-1); }
+
+.ld-calendar-month__weekdays {
+  color: var(--ld-text-subtle);
+  font-family: var(--font-body);
+  font-size: var(--text-label);
+  line-height: var(--leading-label);
+  text-align: center;
+}
+
+.ld-calendar-month__days { margin-top: var(--space-2); }
+.ld-calendar-month__blank { aspect-ratio: 1; }
+
+.ld-calendar-day {
+  aspect-ratio: 1;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  color: var(--ld-text-muted);
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: var(--text-label);
+  line-height: var(--leading-label);
+  min-height: var(--calendar-cell-min);
+  position: relative;
+  transition: background var(--motion-fast) var(--ease-standard), color var(--motion-fast) var(--ease-standard);
+}
+
+.ld-calendar-day:hover { background: var(--ld-surface-raised); color: var(--ld-text); }
+.ld-calendar-day:focus-visible { outline: var(--border-focus); outline-offset: var(--space-1); }
+.ld-calendar-day--activity { background: var(--ld-action-soft); color: var(--ld-action-hover); }
+.ld-calendar-day--selected { background: var(--ld-action); color: var(--ld-text); }
+
+.ld-calendar-day__marker {
+  background: var(--ld-action);
+  border-radius: var(--radius-sm);
+  bottom: var(--space-1);
+  height: var(--space-1);
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  width: var(--space-1);
+}

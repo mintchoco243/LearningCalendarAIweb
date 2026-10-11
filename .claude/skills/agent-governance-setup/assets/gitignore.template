@@ -1,0 +1,90 @@
+# .gitignore — DELETE EVERY BLOCK THAT DOES NOT APPLY TO THIS PROJECT.
+# An ignore file listing stacks the project does not use hides the entries that
+# matter. Verify each block against the actual tree before keeping it.
+# Then delete this header.
+
+# ---------- Always ----------
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets — never commit. Order matters: the negation must come last.
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+
+# Agent tooling — local state, not project source
+.agentkit/
+.agents/
+.codex/
+.opencode/
+.gemini/
+
+# Transient tool output
+playwright-output/
+screenshots/
+repomix-output.xml
+__pycache__/
+
+# ---------- Decide with the maintainer ----------
+
+# Claude Code config. Ignoring it keeps skills and rules local; tracking it
+# shares them with the team. Pick one, delete the other.
+#
+#   (a) ignore entirely:
+# .claude/
+#
+#   (b) ignore local state but track repo-level rules:
+# .claude/
+# !.claude/rules/
+
+# ---------- Node / JavaScript — keep only if package.json exists ----------
+
+node_modules/
+dist/
+build/
+coverage/
+*.tsbuildinfo
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# LOCKFILES ARE COMMITTED. Do not add package-lock.json, yarn.lock, or
+# pnpm-lock.yaml here — the lockfile is how an install reproduces. Verify with
+# `git check-ignore -v pnpm-lock.yaml` that no broader rule swallows it.
+
+# ---------- Next.js ----------
+
+# .next/
+# out/
+# next-env.d.ts
+
+# ---------- Storybook ----------
+
+# storybook-static/
+
+# ---------- Vercel ----------
+
+# .vercel
+
+# ---------- Python ----------
+
+# .venv/
+# *.pyc
+# .pytest_cache/
+# .mypy_cache/
+
+# ---------- Generated artifacts shipped on purpose ----------
+
+# Every negation carries its reason inline, or it becomes unexplainable.
+# Example:
+# dist/
+# # Exception: the compiled CLI is what users run; the build ships rather than
+# # being produced at install time.
+# !/engine/cli/dist/
+# !/engine/cli/dist/**

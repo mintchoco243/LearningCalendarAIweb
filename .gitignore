@@ -1,0 +1,35 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+
+# Agent tooling (local state, not project source)
+.agentkit/
+.agents/
+.codex/
+.opencode/
+.gemini/
+
+# Generated output
+node_modules/
+dist/
+build/
+coverage/
+storybook-static/
+*.tsbuildinfo
+npm-debug.log*
+yarn-debug.log*
+.pnpm-debug.log*
+
+# Transient tool output
+playwright-output/
+screenshots/
+repomix-output.xml
+__pycache__/
