@@ -9,6 +9,7 @@ Location only. Update in the same change that moves anything listed here.
 | `PixelCalendarApp.jsx` | active pixel-gaming page composition and browser state |
 | `app.css` | page shell, workspace layout, and responsive rules |
 | `assets/skill-path-terrain.png` | hero terrain artwork |
+| `assets/garena-logo-vertical.png` | Garena brand mark used by the app shell |
 | `main.jsx` | React entry point |
 | `styles.css` | global styles and Tailwind import |
 | `components/INDEX.md` | UI component map |

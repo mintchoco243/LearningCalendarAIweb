@@ -12,7 +12,7 @@ import { RegistrationConfirmation } from './components/RegistrationConfirmation'
 import { RegistrationActionConfirmation } from './components/RegistrationActionConfirmation'
 import { SectionHeader } from './components/SectionHeader'
 import { Text } from './components/Text'
-import garenaLogo from '../LearningAIweb/Garena Logo Vertical.png'
+import garenaLogo from './assets/garena-logo-vertical.png'
 import './app.css'
 
 const defaultMonth = new Date(2026, 9, 1)
