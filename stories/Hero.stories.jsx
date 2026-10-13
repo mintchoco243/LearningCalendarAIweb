@@ -32,6 +32,16 @@ export const Narrow = {
   ],
 }
 
+export const WithoutPeriodLabel = {
+  args: {
+    ...defaultArgs,
+    periodLabel: null,
+  },
+  decorators: [
+    (Story) => <div style={{ maxWidth: 'var(--content-max)', padding: 'var(--space-6)' }}><Story /></div>,
+  ],
+}
+
 export const LongContent = {
   args: {
     ...defaultArgs,

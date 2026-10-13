@@ -2,7 +2,7 @@
   background: var(--ld-canvas);
   border: var(--border-default);
   border-radius: var(--radius-lg);
-  min-height: clamp(480px, 42vw, 620px);
+  min-height: clamp(300px, 28vw, 360px);
   overflow: hidden;
   position: relative;
 }
@@ -28,7 +28,7 @@
 
 @media (min-width: 768px) {
   .ld-hero__content .ld-heading {
-    font-size: clamp(var(--text-h1), 4.2vw, 62px);
+    font-size: clamp(var(--text-h2), 3.4vw, var(--text-h1));
     line-height: 1.06;
   }
 }
@@ -112,11 +112,8 @@
 .ld-hero__milestone--master { left: 88%; top: 27%; }
 
 .ld-hero__next-skill {
-  border: 1px solid var(--ld-action);
-  border-radius: var(--radius-sm);
   color: var(--ld-text);
   left: 67%;
-  padding: var(--space-2) var(--space-3);
   top: 31%;
 }
 
@@ -126,7 +123,7 @@
 }
 
 @media (max-width: 767px) {
-  .ld-hero { min-height: 660px; }
+  .ld-hero { min-height: 440px; }
   .ld-hero__image { object-position: 65% center; }
   .ld-hero__visual::before {
     background: linear-gradient(180deg, var(--ld-canvas) 0%, color-mix(in srgb, var(--ld-canvas) 94%, transparent) 31%, color-mix(in srgb, var(--ld-canvas) 35%, transparent) 62%, transparent 85%);
@@ -137,6 +134,7 @@
     padding: var(--space-6) var(--space-5);
     width: 100%;
   }
+  .ld-hero__content .group { margin-top: var(--space-4); }
   .ld-hero__content .ld-text--muted {
     font-size: var(--text-body);
     line-height: var(--leading-body);

@@ -53,6 +53,129 @@
   opacity: 0.72;
 }
 
+.ld-interactive-button {
+  align-items: center;
+  background: var(--ld-surface);
+  border: 1px solid var(--ld-border-strong);
+  border-radius: 999px;
+  color: var(--ld-text);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: var(--font-body);
+  font-size: var(--text-body-sm);
+  font-weight: 600;
+  justify-content: center;
+  line-height: var(--leading-body-sm);
+  min-height: var(--calendar-cell-min);
+  min-width: 128px;
+  overflow: hidden;
+  padding: var(--space-3) var(--space-5);
+  position: relative;
+  transition: border-color var(--motion-fast) var(--ease-standard), box-shadow var(--motion-fast) var(--ease-standard), transform var(--motion-fast) var(--ease-standard);
+}
+
+.ld-interactive-button::before {
+  background: linear-gradient(90deg, transparent, rgb(255 255 255 / 42%), transparent);
+  content: '';
+  height: 220%;
+  left: -80%;
+  opacity: 0.82;
+  pointer-events: none;
+  position: absolute;
+  top: -60%;
+  transform: skewX(-22deg);
+  transition: left 680ms var(--ease-overlay);
+  width: 42%;
+}
+
+.ld-interactive-button--primary {
+  background: linear-gradient(115deg, var(--ld-action-soft), var(--ld-action));
+  border-color: var(--ld-action-hover);
+}
+
+.ld-interactive-button--secondary {
+  background: var(--ld-surface);
+  border-color: var(--ld-border-strong);
+}
+
+.ld-interactive-button--danger {
+  background: color-mix(in srgb, var(--ld-danger) 8%, var(--ld-surface));
+  border-color: var(--ld-danger);
+}
+
+.ld-interactive-button__content {
+  align-items: center;
+  display: inline-flex;
+  gap: var(--space-2);
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.ld-interactive-button__dot {
+  background: currentColor;
+  border-radius: 50%;
+  height: var(--space-2);
+  width: var(--space-2);
+}
+
+.ld-interactive-button--primary .ld-interactive-button__dot { background: var(--ld-text); }
+.ld-interactive-button--secondary .ld-interactive-button__dot { background: var(--ld-text-muted); }
+.ld-interactive-button--danger .ld-interactive-button__dot { background: var(--ld-danger); }
+
+.ld-interactive-button__arrow {
+  flex: none;
+  opacity: 0;
+  transform: translateX(calc(var(--space-1) * -1));
+  transition: opacity var(--motion-fast) var(--ease-standard), transform var(--motion-fast) var(--ease-standard);
+}
+
+.ld-interactive-button:hover:not(:disabled),
+.ld-interactive-button.ld-button--preview-hover {
+  border-color: var(--ld-text);
+}
+
+.ld-interactive-button--secondary:hover:not(:disabled),
+.ld-interactive-button--secondary.ld-button--preview-hover {
+  border-color: var(--ld-text);
+}
+
+.ld-interactive-button--danger:hover:not(:disabled),
+.ld-interactive-button--danger.ld-button--preview-hover {
+  border-color: var(--ld-danger);
+}
+
+.ld-interactive-button:hover:not(:disabled)::before { left: 138%; }
+
+.ld-interactive-button.ld-button--preview-hover::before { left: 36%; transition: none; }
+
+.ld-interactive-button:hover:not(:disabled) .ld-interactive-button__arrow,
+.ld-interactive-button.ld-button--preview-hover .ld-interactive-button__arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.ld-interactive-button:active:not(:disabled),
+.ld-interactive-button.ld-button--preview-pressed {
+  transform: translateY(1px);
+}
+
+.ld-interactive-button:focus-visible,
+.ld-interactive-button.ld-button--preview-focus {
+  outline: var(--border-focus);
+  outline-offset: var(--space-1);
+}
+
+.ld-interactive-button:disabled {
+  background: var(--ld-surface);
+  border-color: var(--ld-border);
+  color: var(--ld-text-subtle);
+  cursor: not-allowed;
+  opacity: 0.72;
+}
+
+.ld-interactive-button:disabled .ld-interactive-button__dot { background: var(--ld-text-subtle); }
+
 .ld-heading,
 .ld-text {
   margin: 0;
@@ -103,6 +226,28 @@
   gap: var(--space-3);
 }
 
+.ld-section-header__heading {
+  align-items: baseline;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.ld-section-header__count {
+  align-items: center;
+  background: var(--ld-action-soft);
+  border: 1px solid color-mix(in srgb, var(--ld-action) 62%, var(--ld-border));
+  border-radius: var(--radius-sm);
+  color: var(--ld-action);
+  display: inline-flex;
+  font: inherit;
+  font-weight: 700;
+  justify-content: center;
+  line-height: inherit;
+  padding-inline: var(--space-2);
+  white-space: nowrap;
+}
+
 .ld-section-header--start {
   justify-items: start;
   text-align: start;
@@ -111,4 +256,9 @@
 .ld-section-header--center {
   justify-items: center;
   text-align: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ld-interactive-button:hover:not(:disabled)::before,
+  .ld-interactive-button.ld-button--preview-hover::before { display: none; }
 }

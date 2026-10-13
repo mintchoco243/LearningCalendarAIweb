@@ -19,5 +19,6 @@ Location only. Update in the same change that moves anything listed here.
 | `RegistrationConfirmation.stories.jsx` | registration-outcome popup examples |
 | `SectionHeader.stories.jsx` | section-header examples |
 | `Typography.stories.jsx` | heading and text primitive examples |
+| `UpcomingActivities.stories.jsx` | progressive upcoming-activity section examples |
 
 Parent: `../INDEX.md`

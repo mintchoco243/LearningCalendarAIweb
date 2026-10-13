@@ -19,6 +19,9 @@ export default meta
 
 export const ShortContent = {
   args: {
+    as: 'h2',
+    count: 1,
+    countLabel: 'activity this month',
     heading: 'Learning calendar',
     description: 'Find the next activity for your growth plan.',
   },
@@ -33,6 +36,9 @@ export const LongContent = {
 
 export const WithoutDescription = {
   args: {
+    as: 'h2',
+    count: 8,
+    countLabel: 'upcoming activities',
     heading: 'Upcoming activities',
   },
 }

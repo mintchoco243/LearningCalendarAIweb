@@ -1,7 +1,6 @@
 import { Check } from 'lucide-react'
 import { Button } from './Button'
 import { Heading } from './Heading'
-import { Text } from './Text'
 import './learning-calendar.css'
 
 const weekdayLabels = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN']
@@ -19,10 +18,10 @@ export function LearningCalendar({ activities, completedBeforeDate, month, onNex
   return (
     <section className="ld-learning-calendar" aria-label={`Learning calendar for ${monthLabel}`}>
       <header className="ld-learning-calendar__header">
-        <div><Text as="p" variant="label">Learning calendar</Text><Heading as="h2" variant="section">{monthLabel}</Heading></div>
+        <Heading as="h3" variant="h3">{monthLabel}</Heading>
         <div className="ld-learning-calendar__controls">
-          <Button aria-label="Previous month" onClick={onPreviousMonth} showHoverArrow={false}>Previous</Button>
-          <Button aria-label="Next month" onClick={onNextMonth} showHoverArrow={false}>Next</Button>
+          <Button aria-label="Previous month" onClick={onPreviousMonth} showHoverArrow={false} variant="secondary">Previous</Button>
+          <Button aria-label="Next month" onClick={onNextMonth} showHoverArrow={false} variant="secondary">Next</Button>
         </div>
       </header>
       <div className="ld-learning-calendar__weekdays">{weekdayLabels.map((day) => <span key={day}>{day}</span>)}</div>

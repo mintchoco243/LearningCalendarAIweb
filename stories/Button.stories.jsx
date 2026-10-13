@@ -10,6 +10,8 @@ export const Primary = { args: { children: 'Register for this session' } }
 
 export const Secondary = { args: { children: 'View details', variant: 'secondary' } }
 
+export const Danger = { args: { children: 'Confirm cancellation', variant: 'danger' } }
+
 export const LongLabel = {
   args: {
     children: 'Register for the leadership communication workshop',
@@ -18,6 +20,10 @@ export const LongLabel = {
 
 export const Hover = {
   args: { children: 'Register for this session', className: 'ld-button--preview-hover' },
+}
+
+export const SecondaryHover = {
+  args: { children: 'Back', className: 'ld-button--preview-hover', variant: 'secondary' },
 }
 
 export const Pressed = {

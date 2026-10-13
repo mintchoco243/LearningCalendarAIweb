@@ -75,7 +75,7 @@ function Typography() {
         <div style={{ display: 'grid', gap: 'var(--space-4)' }}>
           <Heading as="h1" variant="h1">H1 — Make time for your next skill</Heading>
           <Heading as="h2" variant="h2">H2 — Learning calendar</Heading>
-          <Heading as="h3" variant="h3">H3 — Upcoming activities</Heading>
+          <Heading as="h3" variant="h3">H3 — October 2026</Heading>
           <Heading as="h4" variant="h4">H4 — Lead with clarity</Heading>
           <Heading as="h5" variant="h5">H5 — Trainer information</Heading>
           <Heading as="h6" variant="h6">H6 — Course summary</Heading>

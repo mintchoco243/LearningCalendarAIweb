@@ -22,6 +22,7 @@ Location only. Update in the same change that moves anything listed here.
 | `RegistrationConfirmation.jsx` | registration outcome popup |
 | `SectionHeader.jsx` | heading and optional description grouping |
 | `Text.jsx` | token-driven text primitive |
+| `UpcomingActivities.jsx` | progressively revealed upcoming activity section |
 | `ui/interactive-hover-button.jsx` | interactive primary-action button primitive |
 | `hero.css` | full-bleed hero artwork, copy layout, and pointer light |
 | `primitives.css` | shared primitive styles |

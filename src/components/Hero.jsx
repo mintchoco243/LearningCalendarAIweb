@@ -11,7 +11,7 @@ export function Hero({
   imageAlt = '',
   imageSrc,
   onAction,
-  periodLabel = 'Learning & development',
+  periodLabel = null,
   ...props
 }) {
   const visualSrc = imageSrc ?? skillPathTerrain
@@ -38,7 +38,7 @@ export function Hero({
             <span className="ld-hero__next-skill">Next skill</span>
           </div>
         )}
-        <figcaption><Text as="span" variant="label">{periodLabel}</Text></figcaption>
+        {periodLabel ? <figcaption><Text as="span" variant="label">{periodLabel}</Text></figcaption> : null}
       </figure>
       <div className="ld-hero__content">
         <SectionHeader

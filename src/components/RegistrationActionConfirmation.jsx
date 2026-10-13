@@ -20,8 +20,8 @@ export function RegistrationActionConfirmation({ pendingAction, onBack, onClose,
         <Heading as="h2" variant="section" id="registration-action-confirmation-title">{title}</Heading>
         <Text>{message}</Text>
         <div className="ld-registration-confirmation__actions">
-          <Button onClick={onBack ?? onClose}>Back</Button>
-          <Button onClick={onConfirm}>{isRegistration ? 'Confirm registration' : 'Confirm cancellation'}</Button>
+          <Button onClick={onBack ?? onClose} variant="secondary">Back</Button>
+          <Button onClick={onConfirm} variant={isRegistration ? 'primary' : 'danger'}>{isRegistration ? 'Confirm registration' : 'Confirm cancellation'}</Button>
         </div>
       </section>
     </div>
